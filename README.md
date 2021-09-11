@@ -1,8 +1,6 @@
 # Cat Eyes
-Minecraft Mod - Client-side night vision toggle with keybinding  
----
-- For Minecraft Fabric 1.17.1
-- Works on servers & singleplayer
-- Default keybind: 'v' (customizable in Settings>Controls>Miscellaneous)
 
-Download link: [(CurseForge)](https://www.curseforge.com/minecraft/mc-mods/cat-eyes-night-vision-toggle-mod)
+This is an installable modification for the popular videogame, Minecraft Java Edition.  
+Utilizing Java and some JSON, I created an addition to the game to make it easier for players to navigate poorly lit environments.
+
+View the mod and download link: [(CurseForge)](https://www.curseforge.com/minecraft/mc-mods/cat-eyes-night-vision-toggle-mod)
