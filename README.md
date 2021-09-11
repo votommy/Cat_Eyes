@@ -5,4 +5,4 @@ Client-side night vision toggle with keybinding
 - Works on servers & singleplayer
 - Default keybind: 'v' (customizable in Settings>Controls>Miscellaneous)
 
-Download link: [(CurseForge)](https://www.curseforge.com/minecraft/mc-mods/cat-eyes-night-vision-toggle-mod){:target="_blank"}
+Download link: <a href="https://www.curseforge.com/minecraft/mc-mods/cat-eyes-night-vision-toggle-mod" target="_blank">(CurseForge)</a>
