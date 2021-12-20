@@ -31,7 +31,9 @@ public class CatEyes implements ModInitializer {
 					catch (InterruptedException ex) {
 						System.out.println(ex);
 					}
-					client.player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 420));
+					if (client.player.hasStatusEffect(StatusEffects.NIGHT_VISION)) {
+						client.player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 420));
+					}
 				}
 			};
 
