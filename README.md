@@ -1,5 +1,6 @@
-# Cat Eyes
+<img src="logo.png" width="150px">
 
+# Cat Eyes
 This is an installable modification for the videogame, Minecraft Java Edition.  
 Utilizing Java and some JSON, I created an addition to the game to make it easier for players to navigate poorly lit environments.
 
