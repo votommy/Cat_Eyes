@@ -10,9 +10,10 @@ View the mod and download link: [(CurseForge)](https://www.curseforge.com/minecr
 ## Developer Guide
 
 ### To update
-Update the properties from *gradle.properties*. Follow the [Fabric Develop guide](https://fabricmc.net/develop/).  
-If it's a new Minecraft version, change the version number in */src/main/resources/fabric.mod.json*
+- Update the properties from *gradle.properties*. Follow the [Fabric Develop guide](https://fabricmc.net/develop/).  
+- Update the fabric-loom version from *build.gradle*.  
+- If it's a new Minecraft version, change the version number in */src/main/resources/fabric.mod.json*
 
 ### To build
-Enter *./gradlew build* into the terminal.<br>
+Enter ```./gradlew build``` into the terminal.<br>
 The build will appear in the *build/libs* folder
