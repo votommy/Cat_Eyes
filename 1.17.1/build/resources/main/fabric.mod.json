@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "cateyes",
-  "version": "1.0.1",
+  "version": "2.0.0",
 
   "name": "Cat Eyes",
   "description": "This will add a key bind to toggle client-side night vision.",
@@ -30,7 +30,7 @@
     "fabricloader": ">=0.11.3",
     "fabric": "*",
     "minecraft": "1.17.x",
-    "java": ">=17"
+    "java": ">=16"
   },
   "suggests": {
     "another-mod": "*"
