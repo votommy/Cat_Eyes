@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "cateyes",
+  "version": "${version}",
+
+  "name": "Cat Eyes",
+  "description": "This will add a key bind to toggle client-side night vision.",
+  "authors": [
+    "TangoSix"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/cateyes/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.tangosix.cateyes.CatEyes"
+    ]
+  },
+  "mixins": [
+    "cateyes.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
