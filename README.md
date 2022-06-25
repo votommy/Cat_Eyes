@@ -10,7 +10,6 @@ View the mod and download link: [(CurseForge)](https://www.curseforge.com/minecr
 *"Thankyou for such a great mod, I have low vision and mods like this are actually a great accessibility aid because I cannot rely on the monitor gamma..."*  
 
 <br>
-<br>
 
 ## Developer Guide
 
