@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "cateyes",
-  "version": "2.0.0",
+  "version": "3.0.1",
 
   "name": "Cat Eyes",
   "description": "This will add a key bind to toggle client-side night vision.",
