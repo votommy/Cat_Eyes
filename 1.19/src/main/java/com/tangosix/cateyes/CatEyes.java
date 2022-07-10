@@ -3,7 +3,6 @@ package com.tangosix.cateyes;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -17,7 +16,7 @@ public class CatEyes implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		toggleBTN = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-				"Toggle Cat Vision", //the keybinding's name
+				"Toggle Cat Eyes", //the keybinding's name
 				InputUtil.Type.KEYSYM, //KEYSYM for keyboard, MOUSE for mouse.
 				GLFW.GLFW_KEY_V, "key.categories.misc" //the keybinding's category.
 		));
@@ -31,8 +30,20 @@ public class CatEyes implements ModInitializer {
 					catch (InterruptedException ex) {
 						System.out.println(ex);
 					}
+
 					if (client.player.hasStatusEffect(StatusEffects.NIGHT_VISION)) {
 						client.player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 420));
+					}
+				}
+			};
+
+			Runnable cureBlindness = () -> {
+				while (client.player.hasStatusEffect(StatusEffects.NIGHT_VISION)) {
+					if (client.player.hasStatusEffect(StatusEffects.DARKNESS)) {
+						client.player.removeStatusEffect(StatusEffects.DARKNESS);
+					}
+					if (client.player.hasStatusEffect(StatusEffects.BLINDNESS)) {
+						client.player.removeStatusEffect(StatusEffects.BLINDNESS);
 					}
 				}
 			};
@@ -43,16 +54,20 @@ public class CatEyes implements ModInitializer {
 				} else {
 					client.player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 420));
 
+					if (client.player.hasStatusEffect(StatusEffects.DARKNESS)) {
+						client.player.removeStatusEffect(StatusEffects.DARKNESS);
+					}
+					if (client.player.hasStatusEffect(StatusEffects.BLINDNESS)) {
+						client.player.removeStatusEffect(StatusEffects.BLINDNESS);
+					}
+
 					Thread thread = new Thread(runnable);
 					thread.start();
+
+					Thread thread2 = new Thread(cureBlindness);
+					thread2.start();
 				}
 			}
 		});
 	}
-
-	public void catVisionTimer(MinecraftClient client) {
-
-
-	}
-
 }
