@@ -18,7 +18,8 @@ public class CatEyes implements ModInitializer {
 		toggleBTN = KeyBindingHelper.registerKeyBinding(new KeyBinding(
 				"Toggle Cat Eyes", //the keybinding's name
 				InputUtil.Type.KEYSYM, //KEYSYM for keyboard, MOUSE for mouse.
-				GLFW.GLFW_KEY_V, "key.categories.misc" //the keybinding's category.
+				GLFW.GLFW_KEY_V, // The keycode of the key
+				"Cat Eyes" //the keybinding's category.
 		));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
